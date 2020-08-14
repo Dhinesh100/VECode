@@ -43,7 +43,7 @@ const Signup = (props) => {
                             if(a===true) {
                                 alert(`${number} already exists`);
                             } else {
-                                props.onVerify(name.trim, number, pass1);
+                                props.onVerify(name.trim(), number, pass1);
                             }
                         });
                 } else {

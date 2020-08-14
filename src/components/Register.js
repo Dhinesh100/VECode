@@ -7,13 +7,10 @@ var CryptoJS = require("crypto-js");
 
 const Register = (props) => {
 
-    const [uname, setUname] = useState("")
     const [email, setEmail] = useState("");
     const [dob, setDob] = useState("");
     const [dept, setDept] = useState("CSE");
     const [progress, setProgress] = useState(0);
-
-    setUname(props.name.trim());
 
     const entries = e => {
         e.preventDefault();
@@ -43,7 +40,7 @@ const Register = (props) => {
                     .ref("Users")
                     .child(props.number)
                     .set({
-                        name: uname,
+                        name: props.name,
                         email: email,
                         dob: dob,
                         registerNumber: props.number,
