@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import './config';
-import bg from './images/background2.webp';
+import './config';\
 import { Button } from 'react-bootstrap';
 import * as firebase from 'firebase';
-import { ProgressBar } from "react-bootstrap";
 
 var CryptoJS = require("crypto-js");
 
@@ -16,7 +14,7 @@ const Login = (props) => {
     const verify = e => {
         e.preventDefault();
         var i = 0;
-        if (i == 0) {
+        if (i === 0) {
             i = 1;
             var width = 1;
             var id = setInterval(frame, 10);

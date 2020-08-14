@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './config';
-import bg from './images/background2.webp';
 import { Button } from 'react-bootstrap';
 import * as firebase from 'firebase';
 

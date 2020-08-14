@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './config';
-import bg from './images/background2.webp';
 import { Button } from 'react-bootstrap';
 import * as firebase from 'firebase';
 
@@ -15,7 +14,7 @@ const Signup = (props) => {
     const verify = e => {
         e.preventDefault();
         var i = 0;
-        if (i == 0) {
+        if (i === 0) {
             i = 1;
             var width = 1;
             var id = setInterval(frame, 10);
@@ -44,7 +43,7 @@ const Signup = (props) => {
                             if(a===true) {
                                 alert(`${number} already exists`);
                             } else {
-                                props.onVerify(name, number, pass1);
+                                props.onVerify(name.trim, number, pass1);
                             }
                         });
                 } else {
