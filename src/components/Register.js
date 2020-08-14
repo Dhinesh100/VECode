@@ -7,16 +7,18 @@ var CryptoJS = require("crypto-js");
 
 const Register = (props) => {
 
-    const [uname, setUname] = useState(props.name.trim())
+    const [uname, setUname] = useState("")
     const [email, setEmail] = useState("");
     const [dob, setDob] = useState("");
     const [dept, setDept] = useState("CSE");
     const [progress, setProgress] = useState(0);
 
+    setUname(props.name.trim());
+
     const entries = e => {
         e.preventDefault();
         var i = 0;
-        if (i == 0) {
+        if (i === 0) {
             i = 1;
             var width = 1;
             var id = setInterval(frame, 10);
