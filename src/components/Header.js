@@ -7,13 +7,15 @@ const Header = () => {
       <header>
         <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
           <Navbar.Brand>
-            <a href="https://play.google.com/store/apps/details?id=com.insights.veccode"><img
-              src="/vecode.png"
-              width="75"
-              height="30"
-              className="d-inline-block align-center"
-              alt="React Bootstrap logo"
-            /></a>
+            <a href="https://play.google.com/store/apps/details?id=com.insights.veccode">
+              <img
+                src="/vecode.png"
+                width="75"
+                height="30"
+                className="d-inline-block align-center"
+                alt="React Bootstrap logo"
+              />
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
