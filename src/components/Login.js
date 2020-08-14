@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './config';\
+import './config';
 import { Button } from 'react-bootstrap';
 import * as firebase from 'firebase';
 
