@@ -6,7 +6,7 @@ const Contact = () => {
             <div>
                 <h2 className="ml-2 together">Contact</h2>
             </div>
-            <div className="ml-1">
+            <div className="ml-2">
                 <p>Contact us at <b>dhineshcarlsen@gmail.com</b></p>
             </div>
         </div>

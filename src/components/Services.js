@@ -1,6 +1,10 @@
 import React from 'react';
 
+const trophy = require('./images/trophy.png');
+const programming = require('./images/programming.jpeg');
 const book = require('./images/book.jpeg');
+const learn = require('./images/learn.jpeg');
+const bulb = require('./images/bulb.png');
 
 const Services = () => {
     return (
@@ -8,7 +12,7 @@ const Services = () => {
             <h2 className="ml-2">Sevices</h2>
             <div className="ml-2 mr-2 d-flex fd">
                 <div>
-                    <img src={book} alt="book" width="130px" height="130px" />
+                    <img src={trophy} alt="trophy" width="160px" height="130px" />
                 </div>{' '}
                 <div>
                     <h3>Competitive Learning</h3>
@@ -20,7 +24,7 @@ const Services = () => {
             </div>
             <div className="ml-2 mr-2 d-flex fd">
                 <div>
-                    <img src={book} alt="book" width="130px" height="130px" />
+                    <img src={programming} alt="programming" width="160px" height="130px" />
                 </div>{' '}
                 <div>
                     <h3>Learn By Doing</h3>
@@ -31,7 +35,7 @@ const Services = () => {
             </div>
             <div className="ml-2 mr-2 d-flex fd">
                 <div>
-                    <img src={book} alt="book" width="130px" height="130px" />
+                    <img src={book} alt="book" width="160px" height="130px" />
                 </div>{' '}
                 <div>
                     <h3>Unbound Learning</h3>
@@ -42,7 +46,7 @@ const Services = () => {
             </div>
             <div className="ml-2 mr-2 d-flex fd">
                 <div>
-                    <img src={book} alt="book" width="130px" height="130px" />
+                    <img src={learn} alt="learn" width="160px" height="130px" />
                 </div>{' '}
                 <div>
                     <h3>Learn While Playing</h3>
@@ -53,7 +57,7 @@ const Services = () => {
             </div>
             <div className="ml-2 mr-2 d-flex fd">
                 <div>
-                    <img src={book} alt="book" width="130px" height="130px" />
+                    <img src={bulb} alt="bulb" width="160px" height="130px" />
                 </div>{' '}
                 <div>
                     <h3>Crowd-Learning</h3>
