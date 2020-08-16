@@ -49,9 +49,11 @@ const Register = (props) => {
                     })
                     props.Home()
             } else {
+                setProgress(0);
                 alert('Enter a valid dob in the given format');
             }
         } else {
+            setProgress(0);
             alert('Kindly enter a valid email address');
         }
     }
@@ -69,7 +71,7 @@ const Register = (props) => {
                     className="d-inline-block align-center"
                     alt="React Bootstrap logo"
                 />
-                <h4 style={{color: 'pink'}}>SIGN UP</h4>
+                <h4 style={{fontSize: '40px', color: 'pink'}}>SIGN UP</h4>
             </div>
             <div className="h-90">
                     <div className="row h-100 align-items-center">

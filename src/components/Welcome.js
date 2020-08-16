@@ -18,11 +18,11 @@ const Welcome = (props) => {
                 <div className="row h-100 align-items-center">
                     <div className="col-12">
                         <div className="text-center">
-                            <h1 style={{color: 'white'}}>Welcome To VECode</h1>
-                            <h3 style={{color: 'white'}}>Let's Study Together</h3>
+                            <h1 style={{color: 'white', fontSize: '45px'}}>Welcome To VECode</h1>
+                            <h3 style={{color: 'white'}} className="together">Let's Study Together</h3>
                             <Button variant="primary" onClick={() => props.onWelcome()}>Get Started</Button>
-                        </div><br /><br />
-                        <h6 style={{color: "white", textAlign: "right"}}>For any queries, kindly WhatsApp to +91 9524981913</h6>
+                        </div>
+                        <p className="m-3" style={{color: "white", textAlign: "center"}}>For any queries, kindly WhatsApp to 9524981913</p>
                     </div>
                 </div>
             </div>

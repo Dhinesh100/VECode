@@ -41,18 +41,22 @@ const Signup = (props) => {
                         .then(function(snapshot) {
                             var a = snapshot.child(number).exists()
                             if(a===true) {
+                                setProgress(0);
                                 alert(`${number} already exists`);
                             } else {
                                 props.onVerify(name.trim(), number, pass1);
                             }
                         });
                 } else {
+                    setProgress(0);
                     alert('Register number is incorrect');
                 }
             } else {
+                setProgress(0);
                 alert('Kindly enter the university register number');
             }
         } else {
+            setProgress(0);
             alert('Password is not matching');
         }
     }
@@ -70,7 +74,7 @@ const Signup = (props) => {
                     className="d-inline-block align-center"
                     alt="React Bootstrap logo"
                 />
-                <h4 style={{color: 'pink'}}>SIGN UP</h4>
+                <h4 style={{fontSize: '40px', color: 'pink'}}>SIGN UP</h4>
             </div>
             <div className="h-90">
                     <div className="row h-100 align-items-center">

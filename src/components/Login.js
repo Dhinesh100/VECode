@@ -71,7 +71,7 @@ const Login = (props) => {
                     className="d-inline-block align-center"
                     alt="React Bootstrap logo"
                 />
-                <h4 style={{color: 'pink'}}>SIGN IN</h4>
+                <h4 style={{fontSize: '40px', color: 'pink'}}>SIGN IN</h4>
             </div>
             <div className="h-90">
                     <div className="row h-100 align-items-center">

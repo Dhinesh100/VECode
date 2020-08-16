@@ -2,9 +2,9 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className="ml-5 mt-2">
+        <div className="mt-1">
             <div>
-                <h2>Contact</h2>
+                <h2 className="ml-2 together">Contact</h2>
             </div>
             <div className="ml-1">
                 <p>Contact us at <b>dhineshcarlsen@gmail.com</b></p>
