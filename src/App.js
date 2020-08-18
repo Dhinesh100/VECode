@@ -8,7 +8,8 @@ import './App.css';
 // import Login from './components/Login';
 // import Signup from './components/Signup';
 // import Register from './components/Register';
-import Aboutus from './components/Aboutus';
+// import Aboutus from './components/Aboutus';
+import Info from './components/Info';
 
 function App() {
 //   const [welcome, setWelcome] = useState(true);
@@ -82,7 +83,7 @@ function App() {
 //   }
 
     return (
-      <Aboutus />
+      <Info />
     );
 }
 

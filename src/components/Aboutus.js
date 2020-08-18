@@ -6,7 +6,7 @@ const Aboutus = () => {
     return (
         <div className="d-flex justify-content-around">
             <div className="d-flex flex-column">
-                <Card style={{ width: '25rem' }} className="mt-5 ml-2 mr-2 shadow-lg p-3 mb-5 bg-white rounded">
+                <Card style={{ width: '25rem' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                     <Card.Body>
                         <Card.Title>Coders' Club</Card.Title>
                         <Card.Text>
@@ -15,7 +15,7 @@ const Aboutus = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '25rem' }} className="mt-5 ml-2 mr-2 shadow-lg p-3 mb-5 bg-white rounded">
+                <Card style={{ width: '25rem' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                     <Card.Body>
                         <Card.Title>What we do?</Card.Title>
                         <Card.Text>
@@ -26,7 +26,7 @@ const Aboutus = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '25rem' }} className="mt-5 ml-2 mr-2 shadow-lg p-3 mb-5 bg-white rounded">
+                <Card style={{ width: '25rem' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                     <Card.Body>
                         <Card.Title>VECode</Card.Title>
                         <Card.Text>
