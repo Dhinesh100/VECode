@@ -9,7 +9,7 @@ const Info = () => {
     
     return (
         <div className="d-flex justify-content-around">
-            <Card style={{ width: '25em' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+            <Card style={{ width: '45em' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                 <Card.Header>
                     MEDALS
                 </Card.Header><br />
