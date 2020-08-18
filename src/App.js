@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Hackerrank from './components/Hackerrank';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Welcome from './components/Welcome';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Register from './components/Register';
+// import Header from './components/Header';
+// import Hackerrank from './components/Hackerrank';
+// import Services from './components/Services';
+// import Contact from './components/Contact';
+// import Welcome from './components/Welcome';
+// import Login from './components/Login';
+// import Signup from './components/Signup';
+// import Register from './components/Register';
 import Aboutus from './components/Aboutus';
 
 function App() {
