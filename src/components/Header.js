@@ -20,11 +20,11 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link className="active" href="index.html">Home</Nav.Link>
-              <Nav.Link href="index.html">Profile</Nav.Link>
-              <Nav.Link href="index.html">MCQ</Nav.Link>
-              <Nav.Link href="index.html">About Us</Nav.Link>
-              <Nav.Link href="index.html">Info</Nav.Link>
+              <Nav.Link className="active">Home</Nav.Link>
+              <Nav.Link>Profile</Nav.Link>
+              <Nav.Link>MCQ</Nav.Link>
+              <Nav.Link>About Us</Nav.Link>
+              <Nav.Link>Info</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar><br /><br /><br />
