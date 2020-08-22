@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 
-const Header = () => {
+const Header = (props) => {
     return (
       <header>
         <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
@@ -20,11 +20,11 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link className="active">Home</Nav.Link>
-              <Nav.Link>Profile</Nav.Link>
-              <Nav.Link>MCQ</Nav.Link>
-              <Nav.Link>About Us</Nav.Link>
-              <Nav.Link>Info</Nav.Link>
+              <Nav.Link href="/" className="active">Home</Nav.Link>
+              <Nav.Link href="/" >Profile</Nav.Link>
+              <Nav.Link href="/" >Contact Us</Nav.Link>
+              <Nav.Link href="/aboutus" >About Us</Nav.Link>
+              <Nav.Link href="/info" >Info</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar><br /><br /><br />

@@ -1,92 +1,134 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Hackerrank from './components/Hackerrank';
-import Services from './components/Services';
-import Contact from './components/Contact';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Register from './components/Register';
-// import Aboutus from './components/Aboutus';
-// import Info from './components/Info';
-import Enhance from './components/Enhance';
-import Insights from './components/Insights';
-import Topskills from './components/Topskills';
-import Development from './components/Development';
+import Aboutus from './components/Aboutus';
+import Info from './components/Info';
+import HomePage from './components/HomePage';
 
 function App() {
-  const [welcome, setWelcome] = useState(true);
-  const [login, setLogin] = useState(false);
-  const [signup, setSignup] = useState(false);
-  const [register, setRegister] = useState(false);
-  const [home, setHome] = useState(false);
+  if(localStorage.getItem("welcome")===null) {
+    localStorage.setItem("welcome", "true");
+  }
+  if(localStorage.getItem("login")===null) {
+    localStorage.setItem("login", "false");
+  }
+  if(localStorage.getItem("signup")===null) {
+    localStorage.setItem("signup", "false");
+  }
+  if(localStorage.getItem("register")===null) {
+    localStorage.setItem("register", "false");
+  }
+  if(localStorage.getItem("home")===null) {
+    localStorage.setItem("home", "false");
+  }
+  const [welcome, setWelcome] = useState(localStorage.getItem("welcome"));
+  const [login, setLogin] = useState(localStorage.getItem("login"));
+  const [signup, setSignup] = useState(localStorage.getItem("signup"));
+  const [register, setRegister] = useState(localStorage.getItem("register"));
+  const [home, setHome] = useState(localStorage.getItem("home"));
   const [uname, setUname] = useState("");
   const [rnumber, setRnumber] = useState("");
   const [cpass, setCpass] = useState("");
+  console.log(localStorage.getItem("login"));
+  console.log(login);
 
   function onWelcome () {
-    setWelcome(false)
-    setLogin(true)
+    setWelcome("false")
+    localStorage.setItem("welcome", "false");
+    setLogin("true")
+    localStorage.setItem("login", "true");
   }
 
   function onSignup () {
-    setLogin(false)
-    setSignup(true)
+    setLogin("false")
+    localStorage.setItem("login", "false");
+    setSignup("true")
+    localStorage.setItem("signup", "true");
   }
 
   function onSignin () {
-    setSignup(false)
-    setLogin(true)
+    setSignup("false")
+    localStorage.setItem("signup", "false");
+    setLogin("true")
+    localStorage.setItem("login", "true");
   }
 
   function onVerify(name, number, pass) {
     setUname(name);
     setRnumber(number);
     setCpass(pass);
-    setRegister(true);
-    setSignup(false);
+    setRegister("true");
+    localStorage.setItem("register", "true");
+    setSignup("false");
+    localStorage.setItem("signup", "false");
   }
 
   function onSignIn() {
-    setRegister(false);
-    setLogin(true);
+    setRegister("false");
+    localStorage.setItem("register", "false");
+    setLogin("true");
+    localStorage.setItem("login", "true");
   }
 
   function Home() {
-    setRegister(false);
-    setHome(true);
+    setRegister("false");
+    localStorage.setItem("register", "false");
+    setHome("true");
+    localStorage.setItem("home", "true");
   }
 
   function HomeScreen() {
-    setHome(true);
-    setLogin(false);
+    setHome("true");
+    localStorage.setItem("home", "true");
+    setLogin("false");
+    localStorage.setItem("login", "false");
   }
 
-  if (welcome) {
+  // useEffect(() => {
+  //   // if(localStorage.getItem("welcome")===null) {
+  //   //   localStorage.setItem("welcome", JSON.parse("true"));
+  //   // }
+  //   if(localStorage.getItem("login")===null) {
+  //     localStorage.setItem("login", false);
+  //   }
+  //   if(localStorage.getItem("signup")===null) {
+  //     localStorage.setItem("signup", false);
+  //   }
+  //   if(localStorage.getItem("register")===null) {
+  //     localStorage.setItem("register", false);
+  //   }
+  //   if(localStorage.getItem("home")===null) {
+  //     localStorage.setItem("home", false);
+  //   }
+  //   console.log(welcome);
+  //   console.log(localStorage.getItem("welcome"));
+  // }, []);
+
+  if (welcome==="true") {
     return <Welcome onWelcome={() => onWelcome()} />
   } 
-  if (login) {
+  if (login==="true") {
     return <Login onSignup={() => onSignup()} HomeScreen={() => HomeScreen()} />
   }
-  if (signup) {
+  if (signup==="true") {
     return <Signup onSignin={() => onSignin()} onVerify={onVerify} />
   }
-  if (register) {
+  if (register==="true") {
     return <Register onSignin={() => onSignIn()} name={uname} number={rnumber} pass={cpass} Home={() => Home()} />
   }
-  if (home) {
+  if (home==="true") {
     return (
-      <div>
-        <Header />
-        <Hackerrank />
-        <Enhance />
-        <Insights />
-        <Services />
-        <Contact />
-        <Topskills />
-        <Development />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path="/" component={HomePage} exact={true} />
+          <Route path="/aboutus" component={Aboutus} />
+          <Route path="/info" component={Info} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
