@@ -105,8 +105,8 @@ function App() {
       <BrowserRouter>
         <div>
           <Route path="/" component={HomePage} exact={true} />
-          <Route path="/aboutus" component={Aboutus} />
-          <Route path="/info" component={Info} />
+          <Route path="vecode07.netlify.app/aboutus" component={Aboutus} />
+          <Route path="vecode07.netlify.app/info" component={Info} />
         </div>
       </BrowserRouter>
     );
