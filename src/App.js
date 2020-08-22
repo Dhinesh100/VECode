@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import Welcome from './components/Welcome';
@@ -87,26 +87,6 @@ function App() {
     setLogin("false");
     localStorage.setItem("login", "false");
   }
-
-  // useEffect(() => {
-  //   // if(localStorage.getItem("welcome")===null) {
-  //   //   localStorage.setItem("welcome", JSON.parse("true"));
-  //   // }
-  //   if(localStorage.getItem("login")===null) {
-  //     localStorage.setItem("login", false);
-  //   }
-  //   if(localStorage.getItem("signup")===null) {
-  //     localStorage.setItem("signup", false);
-  //   }
-  //   if(localStorage.getItem("register")===null) {
-  //     localStorage.setItem("register", false);
-  //   }
-  //   if(localStorage.getItem("home")===null) {
-  //     localStorage.setItem("home", false);
-  //   }
-  //   console.log(welcome);
-  //   console.log(localStorage.getItem("welcome"));
-  // }, []);
 
   if (welcome==="true") {
     return <Welcome onWelcome={() => onWelcome()} />
