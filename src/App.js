@@ -5,8 +5,8 @@ import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Register from './components/Register';
-import Aboutus from './components/Aboutus';
-import Info from './components/Info';
+import Aboutus from './components/AboutPage';
+import Info from './components/InfoPage';
 import HomePage from './components/HomePage';
 
 function App() {
@@ -33,8 +33,6 @@ function App() {
   const [uname, setUname] = useState("");
   const [rnumber, setRnumber] = useState("");
   const [cpass, setCpass] = useState("");
-  console.log(localStorage.getItem("login"));
-  console.log(login);
 
   function onWelcome () {
     setWelcome("false")

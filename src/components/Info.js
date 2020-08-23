@@ -7,7 +7,7 @@ const silver = require('./images/silvermedal.png');
 const bronze = require('./images/bronzemedal.png');
 
 const Info = () => {
-    
+
     return (
         <div>
             <Header />
