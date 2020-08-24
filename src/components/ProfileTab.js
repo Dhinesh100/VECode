@@ -129,7 +129,7 @@ const ProfileTab = () => {
     return (
         <div>
             <Header />
-            <div className="d-flex justify-content-around">
+            <div className="ml-2 d-flex justify-content-around">
                 <div className="d-flex flex-column align-items-center">
                     <h3>Personal Details</h3><br />
                     <p>

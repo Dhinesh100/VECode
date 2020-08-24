@@ -7,7 +7,7 @@ import Signup from './components/Signup';
 import Register from './components/Register';
 import Aboutus from './components/AboutPage';
 import Info from './components/InfoPage';
-import Profile from './components/Profile';
+import Profile from './components/ProfilePage';
 import HomePage from './components/HomePage';
 
 function App() {
