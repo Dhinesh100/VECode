@@ -44,7 +44,7 @@ const Development = () => {
                     prevArrow={<Arrow type="prev" />}
                     dots={true}>{development()}
                 </Slider>
-            </div>
+            </div><br /><br />
         </div>
   );
 }

@@ -2,12 +2,12 @@ import React from 'react';
 import About from './Aboutus';
 import AboutTab from './AboutTab';
 
-const InfoPage = () => {
-    if (window.outerWidth <= 768) {
+const AboutPage = () => {
+    if (window.outerWidth <= 800) {
         return <AboutTab />
     } else {
         return <About />
     }
 }
 
-export default InfoPage;
+export default AboutPage;

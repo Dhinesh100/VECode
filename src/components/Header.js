@@ -21,7 +21,7 @@ const Header = (props) => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="/" className="active">Home</Nav.Link>
-              <Nav.Link href="/" >Profile</Nav.Link>
+              <Nav.Link href="/profile" >Profile</Nav.Link>
               <Nav.Link href="/" >Contact Us</Nav.Link>
               <Nav.Link href="/aboutus" >About Us</Nav.Link>
               <Nav.Link href="/info" >Info</Nav.Link>

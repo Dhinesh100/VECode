@@ -34,6 +34,7 @@ const Register = (props) => {
         if (pattern.test(email)) {
             var re = /^\d{2}\/\d{2}\/\d{4}$/;
             if (re.test(dob)) {
+                localStorage.setItem("register", props.number);
                 var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(props.pass), 'vecode@07').toString();
                 firebase
                     .database()
@@ -45,9 +46,13 @@ const Register = (props) => {
                         dob: dob,
                         registerNumber: props.number,
                         department: dept,
-                        password: ciphertext
+                        password: ciphertext,
+                        gold: 0,
+                        silver: 0,
+                        bronze: 0
                     })
-                    props.Home()
+                    localStorage.setItem("number", props.number);
+                    props.Home();
             } else {
                 setProgress(0);
                 alert('Enter a valid dob in the given format');

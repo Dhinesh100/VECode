@@ -45,6 +45,7 @@ const Login = (props) => {
                             var bytes = CryptoJS.AES.decrypt(b.password, 'vecode@07');
                             var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
                             if(decryptedData===pass) {
+                                localStorage.setItem("number", number);
                                 props.HomeScreen();
                             } else {
                                 setProgress(0);

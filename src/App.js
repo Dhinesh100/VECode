@@ -7,6 +7,7 @@ import Signup from './components/Signup';
 import Register from './components/Register';
 import Aboutus from './components/AboutPage';
 import Info from './components/InfoPage';
+import Profile from './components/Profile';
 import HomePage from './components/HomePage';
 
 function App() {
@@ -103,6 +104,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Route path="/" component={HomePage} exact={true} />
+          <Route path="/profile" component={Profile} />
           <Route path="/aboutus" component={Aboutus} />
           <Route path="/info" component={Info} />
         </div>
