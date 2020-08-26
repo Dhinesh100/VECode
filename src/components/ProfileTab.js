@@ -16,53 +16,30 @@ const ProfileTab = () => {
     const [goldscore, setGoldscore] = useState("");
     const [silverscore, setSilverscore] = useState("");
     const [bronzescore, setBronzescore] = useState("");
-    // const [lang, setLang] = useState("Python");
-    // const [items, setItems] = useState([]);
+    const [lang, setLang] = useState("Python");
+    const [total, setTotal] = useState(0);
+    const [items, setItems] = useState([]);
    
-    // var data = [];
+    var tot=0;
+    var data = []
 
-    // const fetchData = () => {
-    //     firebase
-    //         .database()
-    //         .ref("Users")
-    //         .once("value")
-    //         .then(function(snapshot) {
-    //             var total = snapshot.child(num).child('totalLanguages').val();
-    //             snapshot.forEach(item => {
-    //                 var temp = item.val().languages;
-    //                 data.push(temp);
-    //                 console.log(data)
-    //                 return false;
-    //             })
-    //             // for(var i=0; i<total; i++) {
-    //             //     data.map(item => (
-    //             //         setItems([... items, {
-    //             //             id: i,
-    //             //             value: item.languages[i]
-    //             //         }])
-    //             //     ))
-    //             // }
+    firebase
+        .database()
+        .ref("Users")
+        .once("value")
+        .then((snapshot) => {
+            tot = snapshot.child(num).child('totalLanguages').val();
+            for(var i=0; i<tot; i++) {
+                var temp = snapshot.child(num).child('languages').child(i).val();
+                localStorage.setItem('lan'+i, temp)
+            }
+            setTotal(tot)
+        })
 
-    //             for(var i=0; i<total; i++) {
-    //                 setItems([...items, {
-    //                     id: items.length,
-    //                     value: data[0][i]
-    //                 }])
-    //             }
-    //         })
-    // }
-
-    // function load(total, data) {
-    //     // data.map(item => (
-    //     //     setItems([...items, {
-    //     //         id: i,
-    //     //         value: item.languages[0]
-    //     //     }], console.log(i))
-    //     // ))
-    //     // if(i<total-1) {
-    //     //     load(total, data, ++i);
-    //     // }
-    // }
+            var i=0
+            for(; i<total; i++) {
+                data.push(localStorage.getItem('lan'+i))   
+            }
 
     var num = localStorage.getItem("number");
     firebase
@@ -102,59 +79,68 @@ const ProfileTab = () => {
             window.location="/";
         }
 
-    //     function addLang()  {
-    //         setItems([... items, {
-    //             id: items.length,
-    //             value: lang
-    //         }]);
-    //     }
+        function addLang()  {
+            if(items.some(item => item.value === lang)) {
+                alert('Language already selected')
+                return
+            }
+            setItems([...items, {
+                id: items.length,
+                value: lang
+            }]);
+            setTotal(0)
+        }
 
-    //     function saveLang() {
-    //         firebase
-    //             .database()
-    //             .ref("Users")
-    //             .child(num)
-    //             .update({
-    //                 languages: items.map(item => (item.value)),
-    //                 totalLanguages: items.length
-    //             })
+        function clear() {
+            setItems([])
+        }
+
+        function saveLang() {
+            firebase
+                .database()
+                .ref("Users")
+                .child(num)
+                .update({
+                    languages: items.map(item => item.value),
+                    totalLanguages: items.length
+                })
+
+                setItems([])
             
-    //         alert('Successfully saved the languages in the database');
-    //     }
-
-    // useEffect(() => {
-    //     fetchData();
-    // }, [])
+            alert('Successfully saved the languages in the database');
+        }
 
     return (
         <div>
             <Header />
-            <div className="ml-2 d-flex justify-content-around">
-                <div className="d-flex flex-column align-items-center">
+            <div className="d-flex ml-2 justify-content-around">
+                <div className="d-flex flex-column">
+                    
                     <h3>Personal Details</h3><br />
-                    <p>
-                        <b>Name:</b> {name}<br />
-                        <b>DOB:</b> {dob}<br />
-                        <b>Register Number:</b> {num}<br />
-                        <b>Email Id:</b> {email}<br />
-                        <b>Department:</b> {dept}
-                    </p>
-                    <h3>Medal Analysis</h3><br />
-                    <div className="d-flex flex-row">
-                        <img variant="top" src={gold} style={{width: '2.5em', height: '2.5em'}} alt="Gold Medal" />
-                        <h3 className="ml-3">{goldscore}</h3>
-                    </div>
-                    <div className="d-flex flex-row mt-4">
-                        <img variant="top" src={silver} style={{width: '2.5em', height: '2.5em'}} alt="Silver Medal" />
-                        <h3 className="ml-3">{silverscore}</h3>
-                    </div>
-                    <div className="d-flex flex-row mt-4">
-                        <img variant="top" src={bronze} style={{width: '2.5em', height: '2.5em'}} alt="Bronze Medal" />
-                        <h3 className="ml-3">{bronzescore}</h3>
-                    </div>
-                    {/* <Card style={{ width: '40rem' }} className="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
-                        <Card.Body>
-                            <Card.Header>Languages Known</Card.Header><br />
+                            <p>
+                                <b>Name:</b> {name}<br />
+                                <b>DOB:</b> {dob}<br />
+                                <b>Register Number:</b> {num}<br />
+                                <b>Email Id:</b> {email}<br />
+                                <b>Department:</b> {dept}
+                                </p>
+                        
+                    
+                            <h3>Medal Analysis</h3><br />
+                            <div className="d-flex flex-row">
+                                <img variant="top" src={gold} style={{width: '2.5em', height: '2.5em'}} alt='Gold Medal' />
+                                <h3 className="ml-3">{goldscore}</h3>
+                            </div>
+                            <div className="d-flex flex-row mt-4">
+                                <img variant="top" src={silver} style={{width: '2.5em', height: '2.5em'}} alt='Silver Medal' />
+                                <h3 className="ml-3">{silverscore}</h3>
+                            </div>
+                            <div className="d-flex flex-row mt-4">
+                                <img variant="top" src={bronze} style={{width: '2.5em', height: '2.5em'}} alt='Bronze Medal' />
+                                <h3 className="ml-3">{bronzescore}</h3>
+                            </div>
+                    
+                            <h3>Languages Known</h3><br />
                             <select className="p-2" type="text" value={lang} onChange={event => setLang(event.target.value)}>
                                 <option name="python">Python</option>
                                 <option name="c">C</option>
@@ -169,20 +155,32 @@ const ProfileTab = () => {
                                 <option name="sql">SQL</option>
                                 <option name="swift">Swift</option>
                             </select><br /><br />
-                            <ol>
+                            <big>Languages present in database</big>
+                            <ul>
                                 {
+                                    data.map(item => (
+                                        <li>{item}</li>
+                                    ))
+                                }
+                            </ul>
+                            <hr style={{backgroundColor: 'black'}} />
+                            <big>Replace with the following languages</big>
+                            <ul>
+                                {
+                                    items.length===0 ?
+                                    <small><b>Kindly select a language before publishing</b></small> :
                                     items.map(item => (
                                         <li key={item.id}>{item.value}</li>
                                     ))
                                 }
-                            </ol>
-                            <Button variant="primary" onClick={fetchData}>Display Known Languages</Button>{' '}
-                            <Button variant="primary" onClick={addLang}>Add Language</Button><br /><br />
-                            <Button variant="dark" onClick={saveLang}>Publish</Button>
-                        </Card.Body>
-                    </Card> */}
-                    <Button variant="secondary" onClick={signOut} className="d-flex align-items-center">Sign Out</Button><br />
-                    <Button variant="danger" onClick={deleteAccount} className="d-flex align-items-center">Delete Account</Button><br /><br />
+                            </ul>
+                            
+                            <Button variant="primary" className='mr-2' onClick={addLang}>Add Language</Button><br />
+                            <Button variant="warning" className='mr-2' onClick={clear}>Clear Selection</Button><br /><br />
+                            <Button variant="dark" className='mr-2' onClick={saveLang}>Publish</Button><br />
+                    <Button variant="secondary" className='mr-2' onClick={signOut}>Sign Out</Button><br />
+                    <Button variant="danger" className='mr-2' onClick={deleteAccount}>Delete Account</Button><br /><br />
+                            
                 </div>
             </div>
         </div>
