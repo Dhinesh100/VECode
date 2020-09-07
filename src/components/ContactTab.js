@@ -17,8 +17,8 @@ const ContactTab = () => {
             <div style={topSpot}>
                 <Header />
                 <div className="mt-5 d-flex flex-column align-items-center justify-content-center">
-                    <div><h1 style={{textAlign: 'center'}}>We'd love to hear from you</h1></div>
-                    <div><p style={{marginLeft: '15%', marginRight: '15%', textAlign: 'center'}}>Whether you have a question about courses, tutorials, platforms, challenges, features 
+                    <div><h1 style={{textAlign: 'center', color: 'white'}}>We'd love to hear from you</h1></div>
+                    <div><p style={{marginLeft: '15%', color: 'white', marginRight: '15%', textAlign: 'center'}}>Whether you have a question about courses, tutorials, platforms, challenges, features 
                         of VECode, or anythin else, our team is ready to answer you</p></div>
                     <div><a href="contact#getintouch"><Button>GET IN TOUCH</Button></a></div>
                 </div>
