@@ -55,7 +55,7 @@ const ContactTab = () => {
                     </div>
                 </div><br /><br />
                 <div id="getintouch">
-                    <div style={{backgroundColor: 'gray'}}>
+                    <div className="p-3" style={{backgroundColor: 'gray'}}>
                         <div className="ml-3">
                             <h3 style={{color: 'white'}}>Get in Touch</h3>
                             <p style={{color: 'white'}}>Please fill out the quick form and we will be in touch with you with lightening speed</p>
@@ -67,14 +67,16 @@ const ContactTab = () => {
                             </form>
                         </div>
                     </div>
-                    <h5>Coder's Club</h5>
-                    <p>Coders' club is a hub for ehancing and exhibiting programming acuity. we strive to foster a healthy coding atmosphere in the college.</p><br /><br /><b />
-                    <h5>VECode</h5>
-                    <p>This is an initiative by the Coders' Club to develop a coding 
-                        community among students. It also acts as a knowledge sharing platform.</p><br /><br /><b />
-                    <h5>Evolve</h5>
-                    <p>In this program, we provide tutorials on various programming 
-                        languages and domain for the students to learn and inprove their skillset</p>
+                    <div className="ml-3">
+                        <h5>Coder's Club</h5>
+                        <p>Coders' club is a hub for ehancing and exhibiting programming acuity. we strive to foster a healthy coding atmosphere in the college.</p><br />
+                        <h5>VECode</h5>
+                        <p>This is an initiative by the Coders' Club to develop a coding 
+                            community among students. It also acts as a knowledge sharing platform.</p><br />
+                        <h5>Evolve</h5>
+                        <p>In this program, we provide tutorials on various programming 
+                            languages and domain for the students to learn and inprove their skillset</p>
+                    </div>
                 </div>
         </div>
     );
