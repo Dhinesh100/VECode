@@ -59,7 +59,7 @@ const Contact = () => {
                         <h3>Get in Touch</h3>
                         <p>Please fill out the quick form and we will be in touch with you with lightening speed</p>
                         <form>
-                            <input type="text" placeholder="Name" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
+                            <input type="text" placeholder="Register Number" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
                             <input type="password" placeholder="Password" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
                             <textarea type="text" placeholder="Message" style={{width: '90%', height: '200px', fontSize: '30px'}} /><br /><br />
                             <input type="submit" value="SUBMIT" style={{width: '30%', height: '50px', fontSize: '30px', color: 'white', backgroundColor: 'blueviolet'}} /><br /><br />

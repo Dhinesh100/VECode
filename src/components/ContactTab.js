@@ -17,7 +17,7 @@ const ContactTab = () => {
             <div style={topSpot}>
                 <Header />
                 <div className="mt-5 d-flex flex-column align-items-center justify-content-center">
-                    <div><h1>We'd love to hear from you</h1></div>
+                    <div><h1 style={{textAlign: 'center'}}>We'd love to hear from you</h1></div>
                     <div><p style={{marginLeft: '15%', marginRight: '15%', textAlign: 'center'}}>Whether you have a question about courses, tutorials, platforms, challenges, features 
                         of VECode, or anythin else, our team is ready to answer you</p></div>
                     <div><a href="contact#getintouch"><Button>GET IN TOUCH</Button></a></div>
@@ -60,7 +60,7 @@ const ContactTab = () => {
                             <h3 style={{color: 'white'}}>Get in Touch</h3>
                             <p style={{color: 'white'}}>Please fill out the quick form and we will be in touch with you with lightening speed</p>
                             <form>
-                                <input type="text" placeholder="Name" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
+                                <input type="text" placeholder="Register Number" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
                                 <input type="password" placeholder="Password" style={{width: '90%', height: '50px', fontSize: '30px'}} /><br /><br />
                                 <textarea type="text" placeholder="Message" style={{width: '90%', height: '200px', fontSize: '30px'}} /><br /><br />
                                 <input type="submit" value="SUBMIT" style={{width: '90%', height: '50px', fontSize: '30px', color: 'white', backgroundColor: 'blueviolet'}} /><br /><br />
