@@ -22,7 +22,7 @@ const Header = (props) => {
             <Nav className="ml-auto">
               <Nav.Link href="/" className="active">Home</Nav.Link>
               <Nav.Link href="/profile" >Profile</Nav.Link>
-              <Nav.Link href="/" >Contact Us</Nav.Link>
+              <Nav.Link href="/contact" >Contact Us</Nav.Link>
               <Nav.Link href="/aboutus" >About Us</Nav.Link>
               <Nav.Link href="/info" >Info</Nav.Link>
             </Nav>

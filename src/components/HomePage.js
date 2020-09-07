@@ -16,7 +16,6 @@ const HomePage = () => {
             <Enhance />
             <Insights />
             <Services />
-            <Contact />
             <Topskills />
             <Development />
         </div>

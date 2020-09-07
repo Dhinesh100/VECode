@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Register from './components/Register';
+import Contact from './components/ContactPage';
 import Aboutus from './components/AboutPage';
 import Info from './components/InfoPage';
 import Profile from './components/ProfilePage';
@@ -104,6 +105,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Route path="/" component={HomePage} exact={true} />
+          <Route path="/contact" component={Contact} />
           <Route path="/profile" component={Profile} />
           <Route path="/aboutus" component={Aboutus} />
           <Route path="/info" component={Info} />
